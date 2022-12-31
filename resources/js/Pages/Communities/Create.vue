@@ -76,6 +76,10 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, useForm } from '@inertiajs/inertia-vue3';
 
+defineProps( {
+    errors: Object
+})
+
 const form = useForm({
     name: '',
     description: '',
@@ -85,4 +89,6 @@ const form = useForm({
 const submit = () => {
     form.post(route('communities.store'));
 };
+
+
 </script>
